@@ -5,15 +5,16 @@ const photos=[
 {src:'assets/new-year.jpg',title:'새 학년을 함께 준비하며',date:'2026.02.26',credit:'송민규'},
 {src:'assets/resources.jpg',title:'함께 나누는 과학의 날 자료',date:'2026.04.21',credit:'송민규'},
 {src:'assets/meeting.jpg',title:'서로의 경험을 나누는 자리',date:'2026.05.28',credit:'송민규'},
+{title:'하계 워크숍',date:'2026.06',category:'함께 배우는 시간',description:'6월에 함께한 연구회 하계 워크숍의 기록입니다.',href:'https://cafe.naver.com/f-e/cafes/31348137/articles/416?menuid=22&referrerAllArticles=false'},
 {src:'assets/museum.jpg',title:'아이들과 함께한 과학관',date:'2026.08.08',credit:'송민규'},
 {src:'assets/ai.jpg',title:'AI로 만드는 우리 수업',date:'2026.09.03',credit:'송민규'},
 {src:'assets/festival.jpg',title:'송악마을예술제 과학체험 부스',date:'2026.10.24',credit:'김윤솔',extraPhotos:[{src:'assets/festival-team.jpg',title:'송악마을예술제 · 함께 운영한 선생님들'}]}
 ];
 const gallery=document.querySelector('#photos'),dialog=document.querySelector('#lightbox');
 const available=photos.filter(p=>p.src).flatMap(p=>[p,...(p.extraPhotos||[]).map(extra=>({...p,...extra,extraPhotos:undefined}))]);let current=0;
-photos.forEach(p=>{const card=document.createElement(p.src?'button':'div');card.className='photo-card'+(p.src?' available':'');if(p.src){card.type='button';card.setAttribute('aria-label',p.title+' 사진 크게 보기');}
+photos.forEach(p=>{const card=document.createElement(p.src?'button':p.href?'a':'div');card.className='photo-card'+(p.src?' available':'');if(p.href){card.href=p.href;card.target='_blank';card.rel='noopener';card.classList.add('record-card');}if(p.src){card.type='button';card.setAttribute('aria-label',p.title+' 사진 크게 보기');}
 const frame=document.createElement('div');frame.className='frame';
-if(p.src){const img=document.createElement('img');img.src=p.src;img.alt=p.title;img.loading='lazy';frame.append(img);if(p.extraPhotos?.length){const badge=document.createElement("span");badge.className="album-count";badge.textContent="사진 "+(p.extraPhotos.length+1)+"장";frame.append(badge);}card.onclick=()=>{current=available.indexOf(p);show();dialog.showModal();document.body.style.overflow='hidden';};}else{frame.innerHTML='<div class="placeholder"><i>＋</i><span>사진 준비 중</span></div>';}
+if(p.src){const img=document.createElement('img');img.src=p.src;img.alt=p.title;img.loading='lazy';frame.append(img);if(p.extraPhotos?.length){const badge=document.createElement("span");badge.className="album-count";badge.textContent="사진 "+(p.extraPhotos.length+1)+"장";frame.append(badge);}card.onclick=()=>{current=available.indexOf(p);show();dialog.showModal();document.body.style.overflow='hidden';};}else{const record=document.createElement('div');record.className='record-cover';const label=document.createElement('span');label.textContent=p.category;const heading=document.createElement('strong');heading.textContent=p.title;const desc=document.createElement('p');desc.textContent=p.description;const link=document.createElement('span');link.className='record-link';link.textContent='활동 기록 보기 ↗';record.append(label,heading,desc,link);frame.append(record);}
 const date=document.createElement('span');date.className='card-date';date.textContent=p.date;const title=document.createElement('span');title.className='card-title';title.textContent=p.title;card.append(frame,date,title);gallery.append(card);});
 function show(){const p=available[current],img=document.querySelector('#large-photo');img.src=p.src;img.alt=p.title;document.querySelector('#photo-caption').textContent=p.date+' · '+p.title+' / 사진: '+p.credit;document.querySelector('#photo-count').textContent=(current+1)+' / '+available.length;}
 function move(n){current=(current+n+available.length)%available.length;show();}
