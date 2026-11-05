@@ -9,3 +9,24 @@
 @media(max-width:700px){nav{gap:12px}nav a[href="#communities"]{display:none}.record-cover{padding:10px}.record-cover>span{font-size:8px;letter-spacing:0}.record-cover strong{font-size:15px;margin:10px 0;letter-spacing:-.6px}.record-cover p{display:none}.record-cover .record-link{font-size:8px;margin-top:5px}.newsletters{gap:16px}.newsletter-links{margin-left:0;gap:8px}.newsletter-links a{padding:10px 15px}.related-research h3{font-size:16px}.communities{padding:35px 0 40px}.community-list article{gap:15px;padding:21px 0}.community-list h3{font-size:17px}.community-list p{font-size:12px}.community-index{font-size:19px}.community-tag{font-size:9px;padding:7px 9px}.community-list article>div{min-width:0}}
 
 .about .community-motto{margin-top:24px;color:var(--ink);font-size:15px;line-height:1.9}.community-motto span{font-size:12px;color:var(--muted)}.card-description{display:block;font-size:12px;line-height:1.8;color:var(--muted);margin-top:9px}.lightbox-content p{max-width:850px;margin:14px auto;line-height:1.7}@media(max-width:700px){.card-description{font-size:10px;line-height:1.65}.about .community-motto{font-size:14px}.lightbox-content p{font-size:12px}}
+
+/* Keep every image on the same row baseline regardless of caption length. */
+.gallery { align-items: start; }
+.intro-facts { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1.2fr 1fr; gap: 28px; }
+.intro-facts article { border-top: 1px solid var(--line); padding-top: 15px; }
+.intro-facts h3 { margin: 0 0 14px; font-size: 18px; }
+.intro-facts p, .intro-facts dl { font-size: 13px; line-height: 1.65; margin: 0 0 10px; }
+.intro-facts dl { display: grid; grid-template-columns: auto 1fr; gap: 6px 10px; }
+.intro-facts dt { font-weight: bold; }
+.intro-facts dd { margin: 0; }
+.intro-facts a, .index-body small { font-size: 12px; }
+.record-index { padding: 22px 0 32px; }
+.record-index h2 { font-size: 22px; margin: 0 0 12px; }
+.record-index details { border-top: 1px solid var(--line); }
+.record-index summary { cursor: pointer; padding: 13px 0; font-weight: 600; }
+.record-index summary small { font-weight: 400; color: var(--muted); margin-left: 8px; }
+.index-body { padding: 0 0 14px; }
+.index-body small { display: block; margin-top: 8px; }
+.article-index a { display: grid; grid-template-columns: 3em 1fr auto; gap: 10px; padding: 9px 0; font-size: 14px; }
+.article-index small { display: block; color: var(--muted); margin-top: 3px; }
+@media(max-width:760px) { .intro-facts { grid-template-columns: 1fr; gap: 14px; } }
