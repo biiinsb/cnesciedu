@@ -32,3 +32,26 @@
 @media(max-width:760px) { .intro-facts { grid-template-columns: 1fr; gap: 14px; } }
 
 .communities .section-heading { margin-bottom: 18px; }
+
+/* A consistent link style across both research sections. */
+.related-research a.text-link,
+.related-research .research-sources a {
+  display: inline;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--ink);
+  text-decoration: none;
+}
+.related-research a.text-link:hover,
+.related-research .research-sources a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.related-research a:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 4px;
+}
