@@ -78,3 +78,49 @@
     overflow-wrap: anywhere;
   }
 }
+
+/* Persistent chapter shortcuts, horizontally scrollable on smaller screens. */
+.chapter-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  padding: 12px max(20px, calc((100vw - 1232px) / 2));
+  overflow-x: auto;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+  scrollbar-width: thin;
+  scroll-padding-inline: 20px;
+}
+.chapter-nav a,
+.chapter-nav a:first-child,
+.chapter-nav a[href="#communities"] {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  padding: 9px 15px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 13px;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+.chapter-nav a:hover,
+.chapter-nav a:focus-visible {
+  background: var(--accent);
+  border-color: #829b59;
+}
+@media (max-width: 760px) {
+  .chapter-nav { gap: 8px; padding-block: 10px; }
+  .chapter-nav a,
+  .chapter-nav a:first-child,
+  .chapter-nav a[href="#communities"] {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
