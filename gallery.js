@@ -1,17 +1,17 @@
 // Add or replace photos here: src, title, date, and credit.
 const photos=[
-{src:'assets/group.jpg',title:'함께 떠난 교육박람회',description:'교육박람회에서 AI·디지털 도구를 활용한 과학수업의 가능성을 살폈습니다.',date:'2026.01.22',credit:'송민규'},
+{src:'assets/group.jpg',photoLink:'https://blog.naver.com/about_a_we_some/224156858236',title:'함께 떠난 교육박람회',description:'교육박람회에서 AI·디지털 도구를 활용한 과학수업의 가능성을 살폈습니다.',date:'2026.01.22',credit:'송민규'},
 {src:'assets/seminar.jpg',title:'새로운 수업을 만나는 시간',description:'생성형 AI와 MBL을 연결한 탐구수업 사례를 함께 살펴봤습니다.',date:'2026.01.22',credit:'송민규'},
-{src:'assets/new-year.jpg',title:'새 학년을 함께 준비하며',description:'과학교육 정책과 탐구수업·평가의 고민을 나누며 새 학년을 준비했습니다.',date:'2026.02.26',credit:'송민규'},
+{src:'assets/new-year.jpg',photoLink:'https://blog.naver.com/about_a_we_some/224199786521',title:'새 학년을 함께 준비하며',description:'과학교육 정책과 탐구수업·평가의 고민을 나누며 새 학년을 준비했습니다.',date:'2026.02.26',credit:'송민규'},
 {src:'assets/science-month.jpg',credit:'송민규 · 오마이뉴스',title:'과학의 달, 학교마다 열린 탐구 한마당',date:'2026.04',category:'과학의 달 행사',description:'충남 여러 학교에서 학생들이 부력을 실험하고 pH를 측정하며 과학 원리를 탐구했습니다.',href:'https://m.ohmynews.com/NWS_Web/Mobile/at_pg.aspx?CNTN_CD=A0003226240'},
 {src:'assets/resources.jpg',title:'함께 나누는 과학의 날 자료',description:'운영 계획서부터 탐구활동 자료까지, 과학의 날 준비 자료를 함께 나눴습니다.',date:'2026.04.21',credit:'송민규'},
 {src:'assets/meeting.jpg',title:'서로의 경험을 나누는 자리',description:'운영 사례와 학생 지도 경험을 나누고 Apps Script 활용을 실습했습니다.',date:'2026.05.28',credit:'송민규'},
 {src:'assets/godae-lesson.jpg',credit:'연구회 제공',title:'연구회원 공개수업 · 고대중학교',date:'2026.06.02 · 기사 게재',category:'공개수업',description:'학생들은 공의 움직임을 촬영해 속력 변화를 분석하고, 참관 교사들은 수업 뒤 탐구 활동과 발문을 돌아봤습니다.',href:'https://m.ohmynews.com/NWS_Web/Mobile/at_pg.aspx?CNTN_CD=A0003239668'},
-{src:'assets/summer-workshop.jpg',credit:'연구회 제공',title:'하계 워크숍',date:'2026.06.19~06.20',category:'함께 배우는 시간',description:'하계 워크숍에서 함께 배우고, 과학수업의 경험과 아이디어를 나눴습니다.',href:'https://cafe.naver.com/f-e/cafes/31348137/articles/416?menuid=22&referrerAllArticles=false'},
+{src:'assets/summer-workshop.jpg',credit:'연구회 제공',photoLink:'https://blog.naver.com/about_a_we_some/224322525286',title:'하계 워크숍',date:'2026.06.19~06.20',category:'함께 배우는 시간',description:'하계 워크숍에서 함께 배우고, 과학수업의 경험과 아이디어를 나눴습니다.',href:'https://cafe.naver.com/f-e/cafes/31348137/articles/416?menuid=22&referrerAllArticles=false'},
 {src:'assets/teacher-support.png',photoLink:'https://blog.naver.com/about_a_we_some/224368265361',title:'선생님의 다음 걸음을 응원하며',date:'2026.08.03',credit:'충남융합과학연구회 소식지 4호',description:'1급 정교사 자격연수 중인 회원 네 분을 찾아 응원의 마음을 전했습니다.'},
-{src:'assets/museum.jpg',title:'지역과 함께한 과학관 교육봉사',description:'지역아동센터 학생·청소년 멘토의 과학관 탐구를 과학교사들이 함께 도왔습니다.',date:'2026.08.08',credit:'송민규'},
+{src:'assets/museum.jpg',photoLink:'https://blog.naver.com/about_a_we_some/224374604180',title:'지역과 함께한 과학관 교육봉사',description:'지역아동센터 학생·청소년 멘토의 과학관 탐구를 과학교사들이 함께 도왔습니다.',date:'2026.08.08',credit:'송민규'},
 {src:'assets/sensor-workshop.png',title:'AI 시대, 다시 실험실로',date:'2026.08.12',credit:'충남융합과학연구회 소식지 4호',description:'디지털센서로 열전도·압력·복사 현상을 측정하며 탐구수업을 함께 고민했습니다.'},
-{src:'assets/ai.jpg',title:'AI로 만드는 우리 수업',description:'교사 업무 전문성 강화를 위한 연수를 개설·운영하고 AI·코딩 자료 제작을 실습했습니다.',date:'2026.09.03',credit:'송민규'},
+{src:'assets/ai.jpg',photoLink:'https://blog.naver.com/about_a_we_some/224404272677',title:'AI로 만드는 우리 수업',description:'교사 업무 전문성 강화를 위한 연수를 개설·운영하고 AI·코딩 자료 제작을 실습했습니다.',date:'2026.09.03',credit:'송민규'},
 {src:'assets/festival.jpg',photoLink:'https://blog.naver.com/about_a_we_some/224454754402',title:'송악마을예술제 과학체험 부스',description:'아이와 가족을 위한 ‘탱글탱글 젤리 만들기’ 무료 과학체험 부스를 운영했습니다.',date:'2026.10.24',credit:'김윤솔',extraPhotos:[{src:'assets/festival-team.jpg',title:'송악마을예술제 · 함께 운영한 선생님들'}]}
 ];
 const gallery=document.querySelector('#photos'),dialog=document.querySelector('#lightbox');
